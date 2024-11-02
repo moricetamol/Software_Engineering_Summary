@@ -1,0 +1,138 @@
+\documentclass[
+../../Software_Engineering_Summary.tex,
+]
+{subfiles}
+
+\externaldocument[ext:]{../../Software_Engineering_Summary.tex}
+% Set Graphics Path, so pictures load correctly
+\graphicspath{{../../}}
+
+\begin{document}
+\section{General}
+\subsection{What is Software?}
+Software can describe a lot of things, some examples include:
+
+\begin{greenbox*}
+    \begin{itemize}
+        \item Executable programs
+        \item Configuration files
+        \item System documentation
+        \item User documentation
+        \item Support environment
+        \item etc.
+    \end{itemize}
+\end{greenbox*}
+
+In general Software can be divided into three categories:
+
+\begin{greenbox*}
+        \begin{itemize}
+        \item{Application Software}
+        \begin{itemize}
+            \item Interacts directly with the end user
+            \item General purpose software (To be used in other applications: Word processing, image processing, etc.)
+            \item Customized Software (Software specifically for a specific purpose: CAD, IDE, BIM, etc.)
+        \end{itemize}
+        \item System Level Software
+        \begin{itemize}
+            \item Does not interact directly with the end user
+            \item Responsible for keeping systems running (Operating System, firmware, drivers, etc.)
+        \end{itemize}
+        \item Software as a Service (SaaS)
+        \begin{itemize}
+            \item Runs on a server
+            \item Indirectly accessed via client (browser, remote shell, etc.)
+        \end{itemize}
+    \end{itemize}
+\end{greenbox*}
+
+Furthermore, some characteristics of Software include:
+
+\begin{greenbox*}
+    \begin{itemize}
+        \item Software does not wear out, its environment does
+        \begin{itemize}
+            \item Software is subject to continous change in hardware, needs to be able to adapt
+            \item Software should be able to support new requirements, use cases etc.
+        \end{itemize}
+        \item Software often lives longer than anticipanted
+        \begin{itemize}
+            \item Almost impossible to know use cases in advance as it can be in use for years or even decades (Excel used in biology geneology $\rightarrow$ lead to unexpected behaviour)
+        \end{itemize}
+        \item Software properties are hard to measure
+        \begin{itemize}
+            \item How does the code relate to software quality?
+            \item How do we measure progress?
+            \item How do we measure resilience?
+        \end{itemize}
+    \end{itemize}
+\end{greenbox*}
+\newpage
+\subsection{Software Engineering}
+Typically a software is designed to solve different needs of different groups involved in the development of the software.
+
+\begin{greenbox*}
+    \begin{itemize}
+        \item Customer / Client
+        \begin{itemize}
+            \item Often the person / organisation that'll pay for the development
+            \item Sets a budget, timeframe, requirements etc.
+            \item $\rightarrow$ Requirements analysis
+        \end{itemize}
+        \item User
+        \begin{itemize}
+            \item Usually the person / organisation that'll use the software
+            \item Defines what the software is used for and subsequently what requirements this sets
+            \item $\rightarrow$ Use Case Analysis
+        \end{itemize}
+        \item Manufacturer
+        \begin{itemize}
+            \item Usually the person / organisation that'll design and develop the software
+            \item Is concerned with how to build the software in a way that satisfies the customers and users
+            \item $\rightarrow$ Domain Modelling, Architecture, Quality Assurance, Design Practice, Verification
+        \end{itemize}
+        \item Maintainer
+        \begin{itemize}
+            \item Usually the person / organisation that'll maintain the software during its lifetime
+            \item Responsible for maintenance of the software and updates to make it usuable for new demands and requirements
+            \item $\rightarrow$ Maintenance and Evolution
+        \end{itemize}
+    \end{itemize}
+\end{greenbox*}
+After all these aspects are consideres the software system is the built with the specific requirements in budget and time.
+
+There are quite a few problems that can happen with Software:
+
+\begin{greenbox*}
+    \begin{itemize}
+        \item Unexpected Errors:
+        \begin{itemize}
+            \item Few errors are obvious
+            \item Most of them are near impossible to test for and detect (Algorithmic error, arithmetic overflow)
+            \item Often go undetected for a long time as they're usually the result of very specifc inputs for complex computations
+        \end{itemize}
+        \item Altough errors can occur, as long as they do no violate the requirements they are not considered errors: 
+        \begin{itemize}
+            \item INABIAF: It's not a bug, it's a feature
+        \end{itemize}
+        \item Most errors are caused by missing verification, validation or documentation.
+        \begin{itemize}
+            \item This usually indicates an insufficient match between requirements and implementation
+        \end{itemize}
+    \end{itemize}
+\end{greenbox*}
+
+Errors can also occur as a result of social aspects:
+
+\begin{greenbox*}
+    \begin{itemize}
+        \item Insufficient validation
+        \item Inadequete Specification
+        \item Constantly changing requirements
+        \item Insuffciently trained software engineers
+        \item Managment with lacking grasp on software development
+        \item Unsuitable methods, languages, tools etc.
+    \end{itemize}
+\end{greenbox*}
+
+\end{document}
