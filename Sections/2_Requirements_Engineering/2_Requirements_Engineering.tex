@@ -12,7 +12,7 @@
 In the following we are gonna look at requirements engineering using the case study of a car sharing service.
 The main roles and functionalities of a car sharing service are:
 
-\begin{greenbox}[Main Roles \& Functionalities]
+\begin{defbox}[Main Roles \& Functionalities]
     \begin{itemize}
         \item Role-Independent
         \begin{itemize}
@@ -34,13 +34,13 @@ The main roles and functionalities of a car sharing service are:
             \item Take out vehicle for service
         \end{itemize}
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 
 Requirements Analysis is concerned with building a system of what the product \textit{needs} to fulfill in terms of budget, time and surrounding criteria.
 
 So the objectives are akin to:
 
-\begin{greenbox}[What has to be developed?]
+\begin{defbox}[What has to be developed?]
     \begin{itemize}
         \item Need to understand the problems that arise in the requirement elicitation phase
         \item The different kinds of requirements
@@ -51,11 +51,11 @@ So the objectives are akin to:
             \item Notations: Textual and Graphical
         \end{itemize}
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 
 Although the objectives seem pretty straightforward, requirements analysis can be tricky due to how ambigous language can be. Thorough communication is important to understand fully understand what the client wants.
 
-\begin{greenbox}[What is Requirements Engineering?]
+\begin{defbox}[What is Requirements Engineering?]
     The process of 
     \begin{itemize}
         \item finding
@@ -64,10 +64,10 @@ Although the objectives seem pretty straightforward, requirements analysis can b
         \item validating
     \end{itemize}
     software requirements.
-\end{greenbox}
+\end{defbox}
 \subsection{What are Requirements?}
 
-\begin{greenbox}[Definition]
+\begin{defbox}[Definition]
     \begin{itemize}
         \item Requirements as descriptions of the services provided by the system
         \begin{itemize}
@@ -84,14 +84,14 @@ Although the objectives seem pretty straightforward, requirements analysis can b
             \item etc.
         \end{itemize}
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 
 These requirements are usually handled in the form of \textbf{System Requirements Specification (SRS)} Documents (Ger: Pflichtenheft) or \textbf{User stories}, structured natural language of use cases, state diagrams etc. stored in the product backlog (ordered list of requirements)
 
 \subsection{Different Types of Requirements}
 Overall the requirements can be divided in the following:
 
-\begin{greenbox*}
+\begin{defbox*}
     \begin{itemize}
         \item User Requirements
         \item System Requirements
@@ -99,66 +99,66 @@ Overall the requirements can be divided in the following:
         \item Non-Functional Requirements
         \item Domain Requirements
     \end{itemize}
-\end{greenbox*}
+\end{defbox*}
 
 \subsubsection{User Requirements}
 
-\begin{greenbox*}
+\begin{defbox*}
     State in language or diagrams:
     \begin{itemize}
         \item What services the system should provide
         \item What the operational constraints are
     \end{itemize}
     The descriptions are often high-level and abstract.
-\end{greenbox*}
+\end{defbox*}
 
 For example "According to german law, a car sharing service must keep track of all bookings"
 
 \subsubsection{System Requirements}
 
-\begin{greenbox*}
+\begin{defbox*}
     Precise and detailed specification of the systems
     \begin{itemize}
         \item functions
         \item services 
         \item operational constraints
     \end{itemize}
-\end{greenbox*}
+\end{defbox*}
 
 For example: "After a successful booking the user must be shown an overview of their booking"
 
 "Booking details must be stored for 10 years"
 
-\begin{greenbox}[Characteristics]
+\begin{defbox}[Characteristics]
     \begin{itemize}
         \item Refinement of user Requirements
         \item Determine system interface (functional)
         \item Recorded as part of the SRS and part of the contract with the client
         \item Authored by software developer or business analyst with the client
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 
 \subsubsection{Functional Requirements}
 
-\begin{greenbox*}
+\begin{defbox*}
     Functionality that is clearly identifiable and localized in the code
     \begin{itemize}
         \item Services providede by the system
         \item System reactions to inputs or events
         \item System behaviour in specific situations like Network distruption
     \end{itemize}
-\end{greenbox*}
+\end{defbox*}
 
 \subsubsection{Non-Functional Requirements (NFR)}
 
-\begin{greenbox*}
+\begin{defbox*}
     Constraints of the services or functions
     \begin{itemize}
         \item Service Level Agreement (SLA)
         \item Constraints from development process 
         \item Alignment to standards (e.g. Protocols)
     \end{itemize}
-\end{greenbox*}
+\end{defbox*}
 
 NFRs often apply to the whole system as they cannot be handled by simply adding a peice of code.
 
@@ -166,7 +166,7 @@ For example:
 "The database must be able to process 1000 queries a second"
 "User data must only be accessible to authorized persons"
 
-\begin{greenbox}[Examples of Non-Functional Requirements]
+\begin{defbox}[Examples of Non-Functional Requirements]
     \begin{itemize}
         \item Product requirements
         \begin{itemize}
@@ -187,7 +187,7 @@ For example:
             \item Legal aspects (safety, security, privacy)
         \end{itemize}
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 
 NFRs may often result in the identification of functional requirements and are often more important to adhere to strictly than individual functional requirements.
 
@@ -195,7 +195,7 @@ A problem with NFRs come from how subjective they are: What is ethical, what is 
 
 \subsubsection{Domain Requirements}
 
-\begin{greenbox*}
+\begin{defbox*}
     Are derived from the application domain rather than the needs of the user
     \begin{itemize}
         \item Often expressed in domain specific language $\rightarrow$ Hard to understand for software engineers. 
@@ -203,32 +203,32 @@ A problem with NFRs come from how subjective they are: What is ethical, what is 
         \item Often implicitly assumed as obvious to domain experts
         \item Can be functional or non-functional
     \end{itemize}
-\end{greenbox*}
+\end{defbox*}
 
 \subsection{Feasibility Study}
 The objective of the Feasibility Study is to obtain a justified understanding of whether the requirements engineering and system development phases should be \textbf{started}. This is usually base on:
 
-\begin{greenbox*}
+\begin{defbox*}
     \begin{itemize}
         \item Business requirements 
         \item Outline description of the system
         \item Description of how the system should support the business
     \end{itemize}
-\end{greenbox*}
+\end{defbox*}
 
 The resulting \textbf{Feasibility Report} then covers
 
-\begin{greenbox*}
+\begin{defbox*}
     \begin{itemize}
         \item Whether the system contributes to the objective of the organization
         \item Whether the system can be implemented within technical, financial and schedule constraints
         \item Whether the system can be implemented using other systems used by the company
     \end{itemize}
-\end{greenbox*}
+\end{defbox*}
 
 \subsection{Requirements Elicitation and Analysis}
 \subsubsection{Requirements Discovery}
-\begin{greenbox}[Systematic Requirement Discovery\newline Viewpoint-Oriented Approach]
+\begin{defbox}[Systematic Requirement Discovery\newline Viewpoint-Oriented Approach]
     \begin{itemize}
         \item Interactor Viewpoint
         \begin{itemize}
@@ -248,13 +248,13 @@ The resulting \textbf{Feasibility Report} then covers
             \item Legal, Ethical, etc.
         \end{itemize}
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 
 The goal of the requirement elicitation process is to develop more specific viewpoints and use them to discover more specific requirements.
 
 The elicitation can be done in an interview which are usually structured as follows:
 
-\begin{greenbox}[Systematic Requirement Discovery\newline Interviews]
+\begin{defbox}[Systematic Requirement Discovery\newline Interviews]
     \begin{itemize}
         \item Closed Interviews:
         \begin{itemize}
@@ -270,11 +270,11 @@ The elicitation can be done in an interview which are usually structured as foll
             \item Interviewee can assume domain knowledge
         \end{itemize}
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 
 Some further elicitation techniques are:
 
-\begin{greenbox}[Systematic Requirement Discovery\newline Other Techniques]
+\begin{defbox}[Systematic Requirement Discovery\newline Other Techniques]
     \begin{itemize}
         \item Scenario Analysis
         \begin{itemize}
@@ -285,12 +285,12 @@ Some further elicitation techniques are:
             \item Analyses the use cases of the system
         \end{itemize}
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 
 \subsubsection{Requirements Classification \& Organisation}
 For further structured workflow the requirements should be categorized, this can be done using the \textbf{FURPS+} Model:
 
-\begin{greenbox*}
+\begin{defbox*}
     \begin{itemize}
         \item \textbf{F}unction
         \item \textbf{U}se
@@ -306,7 +306,7 @@ For further structured workflow the requirements should be categorized, this can
             \item Legal
         \end{itemize}
     \end{itemize}
-\end{greenbox*}
+\end{defbox*}
 
 \subsubsection{Requirements prioritisation \& Negotiation}
 Another problem in the elicitation process are conflicts. Different stakeholders might have different requirements. These conflicts need to be resolves through negotiation.
@@ -315,7 +315,7 @@ Another problem in the elicitation process are conflicts. Different stakeholders
 \subsubsection{Requirements Documentation}
 The produced requirements are then documented and used as a basis for further elicitation and analysis. These documents (SRS) can be formal or informal.
 
-\begin{greenbox}[SRS Target Groups]
+\begin{defbox}[SRS Target Groups]
     \begin{itemize}
         \item Client, users
         \item Managers: Client and Manufacturer
@@ -323,11 +323,11 @@ The produced requirements are then documented and used as a basis for further el
         \item Anyone concerned with ordering, using, manufacturing or maintaining
     \end{itemize}
     The level of detail of the SRS depends on the system, development process, whether the product is developed in-house or external etc.
-\end{greenbox}
+\end{defbox}
 
 The usual format of an SRS is:
 
-\begin{greenbox}[System Requirement Specification (SRS) Document Format]
+\begin{defbox}[System Requirement Specification (SRS) Document Format]
     \begin{enumerate}
         \item Introduction
         \begin{enumerate}
@@ -348,11 +348,11 @@ The usual format of an SRS is:
         \item Specific Requirements
         \item Appendices, Index, etc.
     \end{enumerate}
-\end{greenbox}
+\end{defbox}
 
 \subsubsection{Requirements Validation}
 
-\begin{greenbox}
+\begin{defbox}
     [Requirement Validation Checklist]
     \begin{itemize}
         \item Validity
@@ -381,5 +381,5 @@ The usual format of an SRS is:
             \item Is each requirement tracable to the source of the requirement?
         \end{itemize}
     \end{itemize}
-\end{greenbox}
+\end{defbox}
 \end{document}
