@@ -252,7 +252,7 @@
         greenbox % Change these to the colors you want your mathboxes to be
     },
     codingbox/.style={
-        purplebox % Change these to the colors you want your code boxes to be
+        bluebox % Change these to the colors you want your code boxes to be
     }
 }
 
@@ -316,7 +316,8 @@
 }
 \newtcbox{\inlcodebox}[1][]{
     codingbox,
-    inlbox
+    inlbox,
+    fontupper=\ttfamily
 }
 
 \usepackage{parskip} % Removes the indentation of the first line of new section
