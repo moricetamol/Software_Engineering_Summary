@@ -146,9 +146,10 @@
 %----------------------------------------------
 % Title
 %----------------------------------------------
+\def\MainColor{codered} % Sets the main color of the template
 \usepackage{titling}
 \newcommand{\HorRule}{\color{Black} \rule{\linewidth}{2pt}}
-\newcommand{\TitleRule}{\color{codered} \rule{\linewidth}{15pt} \vspace{-90pt}\linebreak \HorRule \linebreak}
+\newcommand{\TitleRule}{\color{\MainColor} \rule{\linewidth}{15pt} \vspace{-90pt}\linebreak \HorRule \linebreak}
 \newcommand{\SectionHorRule}{\color{Black} \rule{\linewidth}{1pt}}
 
 \pretitle{\vspace{-80pt} \fontsize{30}{50} \usefont{OT1}{phv}{b}{n} \TitleRule \color{Black}} % Horizontal rule before the title
@@ -173,7 +174,7 @@
 \newcommand{\SectionFont}{\LARGE\bfseries}
 \titleformat{\section} % Type of heading to format
 %[] % Shape
-{\color{codered} \titlerule[15pt] \color{White} \titlerule[7pt] \color{Black} \titlerule[2pt] \SectionFont} % Format
+{\color{\MainColor} \titlerule[15pt] \color{White} \titlerule[7pt] \color{Black} \titlerule[2pt] \SectionFont} % Format
 {\thesection} % Label
 {1em} % Seperator
 {\SectionFont} % Before-Code
@@ -186,7 +187,16 @@
 {\thesubsection} % Label
 {1em} % Seperator
 {\SubSectionFont} % Before-Code
-[{\titlerule[1pt]}] % After-Code
+[{\color{\MainColor}\titlerule[1pt]}] % After-Code
+
+\newcommand{\SubSubSectionFont}{\bfseries}
+\titleformat{\subsubsection} % Type of heading to format
+%[] % Shape
+{\SubSubSectionFont} % Format
+{\thesubsubsection} % Label
+{1em} % Seperator
+{\SubSubSectionFont} % Before-Code
+[{\color{\MainColor!50}\titlerule[1pt]}] % After-Code
 
 \renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
