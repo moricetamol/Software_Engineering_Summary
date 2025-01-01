@@ -1,0 +1,209 @@
+\documentclass[
+../../Software_Engineering_Summary.tex,
+]
+{subfiles}
+
+\externaldocument[ext:]{../../Software_Engineering_Summary.tex}
+% Set Graphics Path, so pictures load correctly
+\graphicspath{{../../}}
+
+\begin{document}
+\section{Design Techniques}
+\subsection{Documentation}
+
+\begin{defbox}
+    [Readability]
+    \begin{itemize}
+        \item Documentation: Explain design, architecture, etc.
+        \item Source Code Comments: 
+        \begin{itemize}
+            \item API documentation: Packages, interfaces, classes, methods, etc.
+            \item Line comments: Small clarifications of the code
+        \end{itemize}
+        \item Source Code
+    \end{itemize}
+\end{defbox}
+
+\begin{defbox}
+    [Code Specific Aspects]
+    \begin{itemize}
+        \item Coding Style Conventions: Naming, formatting, bracket placement, etc.
+        \item Restrictions on Usage of Language Features
+        \item Naming of Identifiers: Coherent and descriptive naming
+        \item Meaningful Comments
+    \end{itemize}
+\end{defbox}
+
+\subsubsection{Comments}
+Comments can be seperated in two different categories:
+
+\begin{defbox}
+    [API Comments]
+    \begin{itemize}
+        \item \defc{Intent:} Document API usage
+        \item \defc{Audience:} Third-Party developers using the code as a framework or library
+    \end{itemize}
+    Used to describe in detail when method can be called and how it behaves
+
+    \begin{itemize}
+        \item Restrictions on parameters besides types: non-negative, not null, etc.
+        \item Side effects on object state
+        \item Thrown exceptions (when and why)
+        \item What is returned
+    \end{itemize}
+\end{defbox}
+
+\begin{defbox}
+    [Statement Level Comments (Line Comments)]
+    \begin{itemize}
+        \item \defc{Intent:} Describe implementation details, code structure
+        \item \defc{Audience:} Developers on the same code base
+    \end{itemize}
+
+    Should be concise and used sparingly
+    \begin{itemize}
+        \item Clear, well-written code is mostly self explanatory
+        \item Might indicate poorly written or overly complex code \rightarrow \textbf{Refactor}
+    \end{itemize}
+\end{defbox}
+
+\subsection{Refactoring}
+Refactoring describes the process of 
+restructuring code without changing its external behaviour.
+
+This can be done in order to:
+\begin{itemize}
+    \item Prepare for addition of new features (just preparing, not actually adding)
+    \begin{itemize}
+        \item Reduce code duplication
+        \item Avoid nested conditionals
+    \end{itemize}
+    \item Improve design (Cohesion, etc.)
+    \item Increase comprehensibility
+    \begin{itemize}
+        \item Choose a clear naming convention
+        \item Choose meaningful names
+        \item Simplify convoluted logic
+    \end{itemize}
+    \item Improve maintainability
+\end{itemize}
+
+\subsubsection{Refactoring Techniques}
+
+\begin{defbox}
+    [Extract Method]
+    A method should be extracted if one method does multiple things or similar functionality is realized within one method or across multiple methods.
+
+    The method extraction should be done like this:
+    \begin{enumerate}
+        \item Create a new method (target)
+        \item Copy extracted code to target
+        \item Identify local variables used in extracted code
+        \begin{enumerate}[label*=\arabic*.]
+            \item Variables only used in extracted code can be declared as local variables
+            \item Extracted code modifies exactly one outside variable: Check if target method can be query
+            \item If more than one outside variable is modified: Extract Method is not possible
+            \item Pass undeclared variables in target as method parameters
+        \end{enumerate}
+        \item Replace extracted code with call to target
+    \end{enumerate}
+\end{defbox}
+
+This unfortunately sometimes reduces cohesion as target method does not necessarily accesses all the same variables as the source method. This indicates that the class has to many responsibilities. Indicates that usage of \defc{Move Method} is needed.
+
+\defc{Move Method} should be only be used if:
+\begin{itemize}
+    \item Source method does \textbf{not} use features of the source class
+    \item Source method does \textbf{not} override a method or is overriden by a subclass
+\end{itemize}
+
+\begin{defbox}
+    [Move Method]
+    \begin{enumerate}
+        \item Create new method in target class
+        \item Copy source code to target method and adjust it to work there
+        \item Determine how to reference target object from source 
+        \item Turn source method into delegating method
+        \item If not needed: Remove source method and accessors in target class
+    \end{enumerate}
+\end{defbox}
+
+If a class has \defc{two or more independent responsibilities} and no other class can handle these responsibilities, the \defc{Extract Class} technique should be used.
+
+\begin{defbox}
+    [Extract Class]
+    \begin{enumerate}
+        \item Create new class
+        \item Link new class from old class (e.g. attributes), may require a new accessor
+        \item Apply refactoring \defc{Move Method} and \defc{Move Field}
+        \item Review and reduce class interfaces (unnecessary accessors, etc.)
+    \end{enumerate}
+\end{defbox}
+
+\subsection{Design Patterns}
+
+A design pattern describes 
+\begin{itemize}
+    \item a problem that reoccurs regularly in the domain
+    \item the core of a solution to this problem, such that one can reuse the solution in other contexts (might not be exactly the same)
+\end{itemize}
+
+\begin{defbox}
+    [Template Method Pattern]
+    Implements an algorithm in a manner that allows adaptation to different implementations.
+
+    \begin{itemize}
+        \item Define skeleton algorithm, but defer implementation of some concrete parts to subclasses
+        \item Often used in frameworks and APIs
+    \end{itemize}
+
+    Some benefits:
+    \begin{itemize}
+        \item Separation of variant and invariant parts
+        \item Avoidance of unnecessary code duplication
+        \item Control of subclass extensions
+    \end{itemize}
+    
+\end{defbox}
+
+\begin{defbox}
+    [Design Pattern Template]
+    \begin{enumerate}
+        \item 
+        \begin{itemize}
+            \item Name: Short mnemonic to extend the design vocabulary
+            \item Intent: Goals and reasons why to use the pattern
+        \end{itemize}
+        \hrulefill
+        \item 
+        \begin{itemize}
+            \item Motivation: States problem situation
+            \item Applicability: Context in which the pattern can be used
+        \end{itemize}
+        \hrulefill
+        \item 
+        \begin{itemize}
+            \item Structure: Static structure of the pattern (UML Class diagram)
+            \item Participants: Which classes are involved 
+            \item Collaborations: How the classes interact
+            \item Implementation: How to implement the pattern
+        \end{itemize}
+        \hrulefill
+        \item 
+        \begin{itemize}
+            \item Consequences: Gains and trade-offs
+        \end{itemize}
+        \hrulefill
+        \item 
+        \begin{itemize}
+            \item Known Uses: Examples of using the pattern
+            \item Related Patterns: References to and discussion of related patterns
+        \end{itemize}
+    \end{enumerate}
+\end{defbox}
+
+
+
+
+
+\end{document}
