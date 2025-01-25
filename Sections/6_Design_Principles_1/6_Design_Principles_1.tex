@@ -146,7 +146,7 @@ A CFG represents all execution sequences of a program.
     The execution of a basic block starts with the first statement, only the final statement can be a jump (branch or return).
 
     \begin{center}
-        \includegraphics[height=110pt]{Pics/BasicBlocksCFG.png}
+        \includegraphics[height=110pt]{Pics/06/BasicBlocksCFG.png}
     \end{center}
 \end{defbox}
 
@@ -158,18 +158,18 @@ A CFG represents all execution sequences of a program.
 
     \begin{minipage}
         [t]{0.25\textwidth}
-        \includegraphics[height=120pt]{Pics/ExampleCFG.png}
+        \includegraphics[height=120pt]{Pics/06/ExampleCFG.png}
         \captionof*{figure}{Red represents one possible execution sequence}
     \end{minipage}
     \hfill
     \begin{minipage}
         [t]{0.25\textwidth}
-        \includegraphics[height=120pt]{Pics/ExampleCFGLoop.png}
+        \includegraphics[height=120pt]{Pics/06/ExampleCFGLoop.png}
     \end{minipage}
     \hfill
     \begin{minipage}
         [t]{0.48\textwidth}
-        \includegraphics[height=120pt]{Pics/ExampleCFGExceptions.png}
+        \includegraphics[height=120pt]{Pics/06/ExampleCFGExceptions.png}
     \end{minipage}
 \end{defbox}
 
@@ -179,13 +179,13 @@ In many cases the definition of explicit initial and exit nodes is important.
     \begin{minipage}
         [t]{0.47\textwidth}
         \centering
-        \includegraphics[height=120pt]{Pics/ExampleCFGInitialExit.png}
+        \includegraphics[height=120pt]{Pics/06/ExampleCFGInitialExit.png}
     \end{minipage}
     \hfill
     \begin{minipage}
         [t]{0.47\textwidth}
         \centering
-        \includegraphics[height=120pt]{Pics/ExampleCFGSingleExit.png}
+        \includegraphics[height=120pt]{Pics/06/ExampleCFGSingleExit.png}
     \end{minipage}
 \end{figure}
 
@@ -196,7 +196,7 @@ Sometimes code can result in unreachable nodes in one specific execution sequenc
 \begin{figure}
     [htp]
     \centering
-    \includegraphics[height=120pt]{Pics/ExampleCFGInactiveEdges.png}
+    \includegraphics[height=120pt]{Pics/06/ExampleCFGInactiveEdges.png}
     \caption{Assumes $bb_3$ does not modify a}
 \end{figure}
 
@@ -205,7 +205,7 @@ The cyclomatic complexity defines the number of independent paths through the co
 \begin{figure}
     [htp]
     \centering
-    \includegraphics[scale=0.35]{Pics/CFGCyclomaticComplexity.png}
+    \includegraphics[scale=0.35]{Pics/06/CFGCyclomaticComplexity.png}
 \end{figure}
 
 Hereby the number of independent paths through the code is 2. This can be calculated like follows:

@@ -58,14 +58,14 @@ Domain Models are visualized using \textbf{UML Class Diagrams} with suitable res
     \begin{minipage}
         [t]{0.5\textwidth}
         \centering
-        \includegraphics[width=0.95\textwidth]{Pics/FirstClassModel.png}
+        \includegraphics[width=0.95\textwidth]{Pics/04/FirstClassModel.png}
         \caption{Example of Conceptional class (Car sharing)}
     \end{minipage}
     \hfill
     \begin{minipage}
         [t]{0.5\textwidth}
         \centering
-        \includegraphics[width=0.95\textwidth]{Pics/ConceptualClass.png}
+        \includegraphics[width=0.95\textwidth]{Pics/04/ConceptualClass.png}
         \caption{Example of conceptual classes with attributes (domain objects)}
     \end{minipage}
 \end{figure}
@@ -110,13 +110,13 @@ Hereby an objext is defined as an individual thing with a state and relations to
     \begin{minipage}
         [m]{0.6\textwidth}
         \centering
-        \includegraphics[width=0.95\textwidth]{Pics/UMLClassesAssociations.png}
+        \includegraphics[width=0.95\textwidth]{Pics/04/UMLClassesAssociations.png}
     \end{minipage}
     \hfill
     \begin{minipage}
         [m]{0.4\textwidth}
         \centering
-        \includegraphics[width=0.95\textwidth]{Pics/UMLClassesDirectional.png}
+        \includegraphics[width=0.95\textwidth]{Pics/04/UMLClassesDirectional.png}
     \end{minipage}
 
     Associations should be included in the domain model if the knowledge of the relation needs to be preserved. For example: The relation between a bill and its entries needs to be preserved. However the relation between a user and their recent searches is not necessarily important.
@@ -124,7 +124,7 @@ Hereby an objext is defined as an individual thing with a state and relations to
 \begin{figure}
     [htp]
     \centering
-    \includegraphics[scale = 0.35]{Pics/UMLClassAssociationExample.png}
+    \includegraphics[scale = 0.35]{Pics/04/UMLClassAssociationExample.png}
     \caption{Example of UML Class Association}
 \end{figure}
 
@@ -134,7 +134,7 @@ Hereby an objext is defined as an individual thing with a state and relations to
     [Class Generalizations]
     Multiple classes can be comprised of multiple subclasses:
     \centering
-    \includegraphics[scale = 0.4]{Pics/UMLClassGeneralizations.png}
+    \includegraphics[scale = 0.4]{Pics/04/UMLClassGeneralizations.png}
 \end{defbox}
 
 \subsection{Eliciation of Domain Models}
@@ -157,7 +157,7 @@ Hereby an objext is defined as an individual thing with a state and relations to
 \subsubsection{Re-Using Existing Models}
 \begin{figure}[htp]
     \centering
-    \includegraphics[scale=0.4]{Pics/ReUsingConceptualClasses.png}
+    \includegraphics[scale=0.4]{Pics/04/ReUsingConceptualClasses.png}
 \end{figure}
 
 \subsubsection{List of Conceptual Classes Categories}
@@ -172,7 +172,7 @@ Some Categories:
 \end{itemize}
 \begin{figure}[htp]
     \centering
-    \includegraphics[scale=0.5]{Pics/CategoryListExample.png}
+    \includegraphics[scale=0.5]{Pics/04/CategoryListExample.png}
 \end{figure}
 
 \newpage
@@ -212,7 +212,7 @@ A description class should be added to the model if:
     \end{itemize}
     that usually indicates that it should be a \textbf{class}.
     \begin{center}
-        \includegraphics[width=0.65\textwidth]{Pics/ClassVsAttributeExample.png}
+        \includegraphics[width=0.65\textwidth]{Pics/04/ClassVsAttributeExample.png}
         \captionof*{figure}{When considering the destination of a flight, it makes more sense to put that information into a class Airport, instead of making it an attribute of flight. Also allows for better alotment of additional info.}
     \end{center}
 \end{defbox}
@@ -239,7 +239,7 @@ A description class should be added to the model if:
 Initially it is very convenient to type attributes with Strings. It is a generic type that avoids premature decision. Later on it can be refined into a description class:
 \begin{figure}[htp]
     \centering
-    \includegraphics[scale=0.5]{Pics/RefiningModelTypes.png}
+    \includegraphics[scale=0.5]{Pics/04/RefiningModelTypes.png}
 \end{figure}
 
 Obviously a string can only be refined if it actually contains more information that can be shown differently. 
@@ -248,7 +248,7 @@ In general, the domain model serves as an inspiration for the design model later
 \begin{figure}
     [htp]
     \centering
-    \includegraphics[scale= 0.4]{Pics/DomainModelExample.png}
+    \includegraphics[scale= 0.4]{Pics/04/DomainModelExample.png}
     \caption{An example Domain Model}
 \end{figure}
 
@@ -263,7 +263,7 @@ These behaviours can be displayed as UML State Machines Diagrams.
 \begin{defbox}
     [UML State Machine Diagrams]
     \begin{center}
-        \includegraphics[scale=0.5]{Pics/UMLStateMachineDiagrams.png}
+        \includegraphics[scale=0.5]{Pics/04/UMLStateMachineDiagrams.png}
     \end{center}
     This can be read as: \textit{When in State 1, if input in is observed and guard is true, then output out happens and current state becomes state 2. In state 2 perform the (interruptible) action d}.
 
@@ -273,7 +273,7 @@ These behaviours can be displayed as UML State Machines Diagrams.
 \begin{defbox}
     [Basic States]
     \begin{center}
-        \includegraphics[scale=0.3]{Pics/BehaviourBasicStates.png}
+        \includegraphics[scale=0.3]{Pics/04/BehaviourBasicStates.png}
     \end{center}
     States consist of the following:
     \begin{itemize}
@@ -290,7 +290,7 @@ These behaviours can be displayed as UML State Machines Diagrams.
 \begin{defbox}
     [Special States]
     \begin{center}
-        \includegraphics[scale=0.5]{Pics/BehaviourSpecialStates.png}
+        \includegraphics[scale=0.5]{Pics/04/BehaviourSpecialStates.png}
     \end{center}
     There are some special states:
     \begin{itemize}
@@ -304,7 +304,7 @@ These behaviours can be displayed as UML State Machines Diagrams.
 \begin{defbox}
     [Transitions]
     \begin{center}
-        \includegraphics[scale=0.4]{Pics/BehaviourTransitions.png}
+        \includegraphics[scale=0.4]{Pics/04/BehaviourTransitions.png}
     \end{center}
     A transition label is usually in the format \textbf{input? [guard]? / output?}. Hereby all components are optional (therfore ?).
     \begin{itemize}
@@ -333,7 +333,7 @@ In general, the purpose of state machine diagrams are:
 \begin{figure}
     [htp]
     \centering
-    \includegraphics[scale=0.5]{Pics/StateMachineDiagramExample.png}
+    \includegraphics[scale=0.5]{Pics/04/StateMachineDiagramExample.png}
     \caption{An example State Machine Diagram}
 \end{figure}
 \end{document}
